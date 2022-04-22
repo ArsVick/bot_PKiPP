@@ -10,7 +10,7 @@ ru_dict = {'контакты': 'Наши контакты: +7-800-350-55-26',
 ru_book = ['Творческая мастерская ГОРНИЦА', 'Спорт', 'ОГЭ/ЕГЭ', 'Иностранные языки', 'Стажировки',
            'Повышение квалификации и профессиональная переподготовка', 'Шахматы', 'Коворкинг', 'Аренда конференц-зала',
            'Подготовка к школе', 'Поиск товаров из Китая', 'Перевод документов, заверение у нотариуса',
-           'Психологическое консультирование, психокоррекция', 'ОВЗ', 'Кинорежиссура', 'Детский лагерь',
+           'Психологическое консультирование, психокоррекция', 'ОВЗ', 'Кинорежиссура', 'Детский лагерь', '⬅Назад',
            'Ушу', 'Клуб самообороны "Святославъ"', 'Студия гимнастики', 'Взрослые', 'Дети', 'Репетиции',
            'Все предметы', 'Китайский', 'Остальные', 'Китай', 'Индия', 'Вьетнам', 'Контакты', 'Сведения об организации',
            'Запись', '🏴󠁧󠁢󠁥󠁮󠁧󠁿EN']
@@ -32,12 +32,12 @@ en_dict = {'contacts': 'Our contacts: +7-800-350-55-26',
 en_book = ['Creative workshop GORNITSA', 'Sport', 'OGE/EGE', 'Foreign languages', 'Internships',
            'Professional development and professional retraining', 'Chess', 'Coworking', 'Rent of a conference hall',
            'Preparing for school', 'Search for products from China', 'Translation of documents, notarization',
-           'Psychological counseling, psychocorrection', 'OVZ', 'Filmmaking', "Children's camp", 'Wushu',
+           'Psychological counseling, psychocorrection', 'OVZ', 'Filmmaking', "Children's camp", '⬅Back', 'Wushu',
            'Self - Defense Club "Svyatoslav"', 'Gymnastics Studio', 'Adults', 'Kids', 'Rehearsals', 'All subjects',
            'Chinese', 'Other', 'China', 'India', 'Vietnam', 'Contacts', 'Company information', 'Registration', '🇷🇺RU']
 en_answers = [
     "Hello, dear customer!\nI'm a bot of the Institute PKIPP.\nPlease select from the menu what you are interested in.",
     'Choose the item from the menu to make an appointment', 'Choose an age category', 'Choose a sports section',
     'Choose the desired category', 'Choose the desired language', 'Select a country', 'Enter your first and last name',
-    'Enter your phone number', "I didn't understand you, for a hint, write the command / help or / start",
+    'Enter your phone number', "I didn't understand you, for a hint, write the command /help or /start",
     'Great, I signed you up.']
