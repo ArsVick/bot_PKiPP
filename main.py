@@ -10,7 +10,7 @@ phrases = ru_book
 answers = ru_answers
 
 
-@bot.message_handler(commands=['start', 'help'])
+@bot.message_handler(func=lambda message: True, commands=['start', 'help'])
 def send_welcome(message: types.Message):
     global start_markup
     start_markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -20,6 +20,10 @@ def send_welcome(message: types.Message):
     item4 = types.KeyboardButton(phrases[-1])
     start_markup.add(item1, item3, item4, item2)
     bot.send_message(message.from_user.id, answers[0], reply_markup=start_markup)
+
+
+def back(message: types.Message):
+    bot.send_message(message.from_user.id, "Ok", reply_markup=start_markup)
 
 
 def booking(message: types.Message):
@@ -63,12 +67,14 @@ def repeat_all_messages(message: types.Message):
         booking(message)
     elif message.text == phrases[0]:
         menu_tmg = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
-        menu_tmg.add(telebot.types.KeyboardButton(text=phrases[20]))
-        menu_tmg.add(telebot.types.KeyboardButton(text=phrases[21]))
+        menu_tmg.add(types.KeyboardButton(text=phrases[16]))
+        menu_tmg.add(types.KeyboardButton(text=phrases[20]))
+        menu_tmg.add(types.KeyboardButton(text=phrases[21]))
         book = message.text
         bot.send_message(message.chat.id, answers[2], reply_markup=menu_tmg)
     elif message.text == phrases[1]:
         menu_sport = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        menu_sport.add(types.KeyboardButton(text=phrases[16]))
         menu_sport.add(types.KeyboardButton(text=phrases[17]))
         menu_sport.add(types.KeyboardButton(text=phrases[18]))
         menu_sport.add(types.KeyboardButton(text=phrases[19]))
@@ -76,25 +82,28 @@ def repeat_all_messages(message: types.Message):
         bot.send_message(message.from_user.id, answers[3], reply_markup=menu_sport)
     elif message.text == phrases[2]:
         menu_ege = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        menu_ege.add(types.KeyboardButton(text=phrases[16]))
         menu_ege.add(types.KeyboardButton(text=phrases[22]))
         menu_ege.add(types.KeyboardButton(text=phrases[23]))
         book = message.text
         bot.send_message(message.chat.id, answers[4], reply_markup=menu_ege)
     elif message.text == phrases[3]:
         menu_lang = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        menu_lang.add(types.KeyboardButton(text=phrases[16]))
         menu_lang.add(types.KeyboardButton(text=phrases[24]))
         menu_lang.add(types.KeyboardButton(text=phrases[25]))
         book = message.text
         bot.send_message(message.chat.id, answers[5], reply_markup=menu_lang)
     elif message.text == phrases[4]:
         menu_train = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+        menu_train.add(types.KeyboardButton(text=phrases[16]))
         menu_train.add(types.KeyboardButton(text=phrases[26]))
         menu_train.add(types.KeyboardButton(text=phrases[27]))
         menu_train.add(types.KeyboardButton(text=phrases[28]))
         book = message.text
         bot.send_message(message.chat.id, answers[6], reply_markup=menu_train)
     elif message.text == phrases[16]:
-        bot.send_message(message.from_user.id, "Ok", reply_markup=start_markup)
+        back(message)
     elif message.text in phrases[17:29]:
         point = message.text
         bot.send_message(message.from_user.id, answers[7])
