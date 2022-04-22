@@ -100,11 +100,12 @@ def repeat_all_messages(message: types.Message):
         menu_train.add(types.KeyboardButton(text=phrases[26]))
         menu_train.add(types.KeyboardButton(text=phrases[27]))
         menu_train.add(types.KeyboardButton(text=phrases[28]))
+        menu_train.add(types.KeyboardButton(text=phrases[29]))
         book = message.text
         bot.send_message(message.chat.id, answers[6], reply_markup=menu_train)
     elif message.text == phrases[16]:
         back(message)
-    elif message.text in phrases[17:29]:
+    elif message.text in phrases[17:30]:
         point = message.text
         bot.send_message(message.from_user.id, answers[7])
         bot.register_next_step_handler(message, get_name)
