@@ -1,0 +1,2 @@
+token = '5397610652:AAFp3sieZrxfcLvkn48FVY7J83KmSyfrktU'
+id = 234  # 594790583
